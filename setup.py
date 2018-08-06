@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
-with open('requirements.txt') as f:
-    requirements = f.read().splitlines()
+# with open('requirements.txt') as f:
+#     requirements = f.read().splitlines()
 
 readme = 'Python implementation of seqNMF.  For more information visit https://github.com/ContextLab/seqnmf.'
 
@@ -17,6 +17,11 @@ setup(
     author_email='contextualdynamics@gmail.com',
     url='https://www.context-lab.com',
     license=license,
-    install_requires=requirements,
+    install_requires=[
+        'numpy',
+        'matplotlib',
+        'scipy',
+        'seaborn'
+    ],
     packages=find_packages(exclude=('tests', 'docs'))
 )
